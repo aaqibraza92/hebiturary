@@ -39,7 +39,7 @@ if (get_option('show_on_front') == 'posts') {
 				<div class="center-0-478">
 					<div class="topbtn">
 						<!-- <a class="button thin medium full-rounded hover-dark tp-button1 white" href="#about">INVITEE ?</a> -->
-						<a class="button thin medium full-rounded hover-dark tp-button1 white" href="<?php echo esc_url(home_url('/')); ?>login/">Login</a>
+						<a class="button thin medium full-rounded hover-dark tp-button1 white" href="<?php echo esc_url(home_url('/')); ?>login/">Login/Signup</a>
 					</div>
 				</div>
 
@@ -74,9 +74,9 @@ if (get_option('show_on_front') == 'posts') {
 		<div class="container fes1-cont pb-0">
 			<div class="row">
 
-				<div class="col-md-8">
+				<div class="col-md-12">
 
-					<div class="row">
+					<div class="row text-center">
 						<div class="col-md-12">
 							<div class="fes1-main-title-cont wow fadeInDown">
 								<div class="fes1-title-50 font-raleway" style="color: rgb(102, 99, 99);">
@@ -145,9 +145,7 @@ if (get_option('show_on_front') == 'posts') {
 				</div>
 
 
-				<div class="col-md-4 mt-30 fes1-img-cont wow fadeInUp">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/framework/images/fes11-2.png" alt="img">
-				</div>
+		
 
 			</div>
 		</div>
@@ -357,84 +355,13 @@ if (get_option('show_on_front') == 'posts') {
 		</div>
 	</div>
 
-	<div id="about" class="page-section">
-		<div class="container fes1-cont pb-0">
-			<div class="row">
-
-				<div class="col-md-8">
-
-					<div class="row">
-						<div class="col-md-12">
-							<div class="fes1-main-title-cont wow fadeInDown">
-								<div class="fes1-title-50 font-raleway" style="color: rgb(102, 99, 99);">
-									World Class Training Programs
-								</div>
-								<div class="fes1-title-50 font-poppins" style="color: rgb(190,1, 1); font-stretch:extra-expanded; font-weight:bolder;">
-									At your CONVENIENCE
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="row">
-
-						<div class="col-md-6 col-sm-6">
-							<div class="fes1-box wow fadeIn">
-								<div class="fes1-box-icon">
-									<div class="icon icon-basic-mixer2"></div>
-								</div>
-								<h3 style="color: rgb(102, 99, 99);">Curated Programs</h3>
-
-							</div>
-						</div>
-
-						<div class="col-md-6 col-sm-6">
-							<div class="fes1-box wow fadeIn" data-wow-delay="200ms">
-								<div class="fes1-box-icon">
-									<div class="icon icon-basic-lightbulb"></div>
-								</div>
-								<h3 style="color: rgb(102, 99, 99);">Internationally Certified Trainers</h3>
-
-							</div>
-						</div>
-
-					</div>
-
-					<div class="row">
-
-						<div class="col-md-6 col-sm-6">
-							<div class="fes1-box wow fadeIn" data-wow-delay="400ms">
-								<div class="fes1-box-icon">
-									<div class="icon icon-basic-helm"></div>
-								</div>
-								<h3 style="color: rgb(102, 99, 99);">Result Oriented Strategies</h3>
-
-							</div>
-						</div>
-
-						<div class="col-md-6 col-sm-6">
-							<div class="fes1-box wow fadeIn" data-wow-delay="600ms">
-								<div class="fes1-box-icon">
-									<div class="icon icon-basic-settings"></div>
-								</div>
-								<h3 style="color: rgb(50, 116, 124);">Bagful Of Encouragement</h3>
-
-							</div>
-						</div>
-
-					</div>
-
-				</div>
-
-
-				<div class="col-md-4 mt-30 fes1-img-cont wow fadeInUp">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/framework/images/fes11-2-new.png" alt="img">
-				</div>
-
+	<div class="page-section bg-gray" style="background-color: #67b6ca;">
+		<div class="container">
+			<div class="video-ads-text-cont video-ads-text-black clearfix">
+				<span class="video-ads-text font-raleway colorWhite"> Our Programs include a whole lot of personal care and ... </span>
 			</div>
 		</div>
 	</div>
-
 	<div class="page-section">
 		<div class="container-fluid">
 			<div class="row row-sm-fix">
@@ -486,14 +413,15 @@ if (get_option('show_on_front') == 'posts') {
 				</div>
 
 				<div class="col-md-6">
-					<div class="row">
-						<video controls class="w-100">
+					<div class="row h-100">
+					<video class="h-100 cover"  controls class="w-100">
 							<source src=http://techslides.com/demos/sample-videos/small.webm type=video/webm>
 							<source src=http://techslides.com/demos/sample-videos/small.ogv type=video/ogg>
 							<source src=http://techslides.com/demos/sample-videos/small.mp4 type=video/mp4>
 							<source src=http://techslides.com/demos/sample-videos/small.3gp type=video/3gp>
 						</video>
 					</div>
+					
 				</div>
 
 			</div>
@@ -504,8 +432,13 @@ if (get_option('show_on_front') == 'posts') {
 	<div class="page-section">
 		<div class="container-fluid">
 			<div class="row row-sm-fix">
+				<div class="col-md-6 align-items-end d-flex">
+					<div class="fes2-main-text-cont">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/framework/images/fes11-2.png" alt="img">
+					</div>
 
-				<div class="col-md-8 wow fadeInLeft equal-height bg-gray">
+				</div>
+				<div class="col-md-6 wow fadeInLeft equal-height bg-gray">
 					<div class="fes2-main-text-cont">
 						<div class="fes2-title-45 font-montserrat mb30">
 							<strong>GET IN TOUCH</strong>
@@ -527,17 +460,17 @@ if (get_option('show_on_front') == 'posts') {
 							</li>
 							<li class="d-flex">
 								<span class="mr10">
-			
-								<svg xmlns="http://www.w3.org/2000/svg" width="29.085" height="28.303" viewBox="0 0 29.085 28.303">
-  <path id="Icon_awesome-whatsapp" data-name="Icon awesome-whatsapp" d="M24.729,6.363A14.507,14.507,0,0,0,14.536,2.25,14.24,14.24,0,0,0,.123,16.275a13.75,13.75,0,0,0,1.922,7.013L0,30.553,7.641,28.6a14.684,14.684,0,0,0,6.888,1.706h.006c7.94,0,14.549-6.292,14.549-14.025a13.9,13.9,0,0,0-4.356-9.919ZM14.536,27.944a12.211,12.211,0,0,1-6.1-1.624L8,26.068,3.467,27.224l1.208-4.3-.286-.442a11.389,11.389,0,0,1-1.831-6.2A11.838,11.838,0,0,1,14.543,4.619a12.041,12.041,0,0,1,8.466,3.418,11.554,11.554,0,0,1,3.642,8.245A11.958,11.958,0,0,1,14.536,27.944Zm6.57-8.731c-.357-.177-2.129-1.023-2.461-1.137s-.571-.177-.812.177-.928,1.137-1.143,1.377-.422.265-.779.088a9.729,9.729,0,0,1-4.9-4.17c-.37-.619.37-.575,1.058-1.914a.634.634,0,0,0-.032-.613c-.091-.177-.812-1.9-1.11-2.6-.292-.682-.591-.588-.812-.6s-.448-.013-.688-.013a1.351,1.351,0,0,0-.961.436,3.9,3.9,0,0,0-1.26,2.925,6.771,6.771,0,0,0,1.467,3.626,15.928,15.928,0,0,0,6.155,5.294c2.285.96,3.181,1.042,4.324.878A3.689,3.689,0,0,0,21.58,21.3a2.858,2.858,0,0,0,.208-1.668C21.7,19.472,21.463,19.383,21.106,19.213Z" transform="translate(0 -2.25)" fill="#303036"/>
-</svg>
+
+									<svg xmlns="http://www.w3.org/2000/svg" width="29.085" height="28.303" viewBox="0 0 29.085 28.303">
+										<path id="Icon_awesome-whatsapp" data-name="Icon awesome-whatsapp" d="M24.729,6.363A14.507,14.507,0,0,0,14.536,2.25,14.24,14.24,0,0,0,.123,16.275a13.75,13.75,0,0,0,1.922,7.013L0,30.553,7.641,28.6a14.684,14.684,0,0,0,6.888,1.706h.006c7.94,0,14.549-6.292,14.549-14.025a13.9,13.9,0,0,0-4.356-9.919ZM14.536,27.944a12.211,12.211,0,0,1-6.1-1.624L8,26.068,3.467,27.224l1.208-4.3-.286-.442a11.389,11.389,0,0,1-1.831-6.2A11.838,11.838,0,0,1,14.543,4.619a12.041,12.041,0,0,1,8.466,3.418,11.554,11.554,0,0,1,3.642,8.245A11.958,11.958,0,0,1,14.536,27.944Zm6.57-8.731c-.357-.177-2.129-1.023-2.461-1.137s-.571-.177-.812.177-.928,1.137-1.143,1.377-.422.265-.779.088a9.729,9.729,0,0,1-4.9-4.17c-.37-.619.37-.575,1.058-1.914a.634.634,0,0,0-.032-.613c-.091-.177-.812-1.9-1.11-2.6-.292-.682-.591-.588-.812-.6s-.448-.013-.688-.013a1.351,1.351,0,0,0-.961.436,3.9,3.9,0,0,0-1.26,2.925,6.771,6.771,0,0,0,1.467,3.626,15.928,15.928,0,0,0,6.155,5.294c2.285.96,3.181,1.042,4.324.878A3.689,3.689,0,0,0,21.58,21.3a2.858,2.858,0,0,0,.208-1.668C21.7,19.472,21.463,19.383,21.106,19.213Z" transform="translate(0 -2.25)" fill="#303036" />
+									</svg>
 
 
 								</span>
 
 								<span>
-								<a href="https://api.whatsapp.com/send?phone=+919711571907&amp;text=Hello Jyoti">+91 97115 71907</a>
-									
+									<a href="https://api.whatsapp.com/send?phone=+919711571907&amp;text=Hello Jyoti">+91 97115 71907</a>
+
 								</span>
 							</li>
 						</ul>
@@ -546,9 +479,7 @@ if (get_option('show_on_front') == 'posts') {
 					</div>
 				</div>
 
-				<div class="col-md-4 align-items-end d-flex">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/framework/images/fes11-2.png" alt="img">
-				</div>
+
 
 			</div>
 		</div>

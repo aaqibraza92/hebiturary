@@ -41,9 +41,10 @@ do_action('uwp_template_before', 'account'); ?>
 			</div>
 		</div>
 		<div class="col-lg-9">
-			<div class="pl-lg-4 pl-sm-0 h-100 pt-5 pb-lg-0 pb-3">
-				<div>
-					<h3 class="mb-lg-5 mb-4">Your Report</h3>
+			<div class="pl-lg-4 pl-sm-0 h-100 pt-0 pb-lg-0 pb-3">
+			
+			<div class="reportArea pt20 pb20 mb30 pl10 pr10">
+					<h3 class="mb15 colorWhite fw700">Your Report</h3>
 					<?php
 					$currentUser=get_current_user_id();
 					$user_info = get_userdata($currentUser);
@@ -51,7 +52,6 @@ do_action('uwp_template_before', 'account'); ?>
 					print_r($server_url);
 					?>
 				</div>
-
 
 				<?php
 				$form_title = !empty($args['form_title']) ? esc_attr__($args['form_title'], 'userswp') : __('Edit Account', 'userswp');
@@ -61,6 +61,7 @@ do_action('uwp_template_before', 'account'); ?>
 				} else {
 					$type = 'account';
 				}
+
 
 				$form_title = apply_filters('uwp_account_page_title', $form_title, $type);
 				if ($form_title != '0') {

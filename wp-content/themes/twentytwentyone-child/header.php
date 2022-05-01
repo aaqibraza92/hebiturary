@@ -83,7 +83,8 @@
 	<?php wp_body_open(); ?>
 	<div id="page" class="site">
 
-		<?php //get_template_part('template-parts/header/site-header'); ?>
+		<?php //get_template_part('template-parts/header/site-header'); 
+		?>
 
 
 		<div class="header-black-bg <?php if (!is_front_page()) {
@@ -107,21 +108,45 @@
 						</div>
 
 						<div class="col-md-9 col-xs-3">
-							<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu', ) );
-				
-							?>
-							<!-- <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropdown button
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-  </div>
-</div>
-						 -->
-							
+							<div class="d-flex justify-content-end">
+								<?php wp_nav_menu(array('theme_location' => 'primary', 'menu_class' => 'nav-menu',));
+								$username = get_the_author_meta('display_name', get_current_user_id());
+								?>
+								<?php
+								if (is_user_logged_in()) {
+								?>
+									<div class="dropdown">
+										<span class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											<div class="d-flex align-items-center">
+												<div class="w40 mr8">
+													<img class="radius100 w-100" src="<?php echo get_stylesheet_directory_uri(); ?>/framework/images/users.jpg" class="logo-img" alt="Logo">
+												</div>
+												<div class="colorWhite text-capitalize">
+													<?php echo $username ?>
+												</div>
+											</div>
+
+										</span>
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+											<a class="dropdown-item" href="<?php echo esc_url( home_url( '/account' ) ); ?>">My Profile</a>
+											<a class="dropdown-item" href="<?php echo esc_url( home_url( '/account' ) ); ?>">My Report</a>
+											<a class="dropdown-item" href="<?php echo wp_logout_url($redirect = esc_url( home_url( '/login' ) ) ) ?>">Logout</a>
+										</div>
+									</div>
+								<?php
+								} else {
+								?>
+								<div class="ml10">
+									<a class="menuItems fw700" href="<?php echo esc_url( home_url( '/login' ) ); ?>">Login/Signup</a>
+								</div>
+								<?php
+								}
+								?>
+
+							</div>
+
+
+
 						</div>
 					</div>
 

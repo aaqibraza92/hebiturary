@@ -35,6 +35,7 @@ body{
     border-color: #be0101;
     -webkit-border-radius: 50px;
     border-radius: 50px;
+    padding: 10px 0;
   }
   .btn.btn-primary:hover {
     background: #3ac1c9;
@@ -479,4 +480,43 @@ body .radiusFull{
   background: #f1cb67 !important;
   color: #fff !important;
   border-color: #f1cb67 !important;
+}
+.w40 {
+  width: 40px;
+}
+body,*,li,span,div,section,a,footer,header{
+  font-family: 'Raleway', sans-serif;
+}
+.menuItems{
+  line-height: 40px;
+  font-size: 14px;
+  color: #fff;
+}
+.bsui .form-control,.form-control {
+  height: 50px;
+}
+#mega-menu-wrap-primary li a:hover,.menuItems:hover{
+  color: #303036 !important;
+}
+#mega-menu-wrap-primary li a,.menuItems{
+-webkit-transition: all 0.3s ease 0s;
+transition: all 0.3s ease 0s;
+}
+.header-wrapper .dropdown-toggle::after {
+  display: none;
+}
+.header-wrapper {
+  padding-top: 18px;
+}
+.home .header-wrapper{
+  padding-top: 0px;;
+}
+.reportArea {
+  background: #ae9b3f;
+  border-radius: 50px;
+  text-align: center;
+  color: #fff;
+}
+.dropdown-menu.show {
+  transform: translate3d(-55px, 49px, 0px) !important;
 }
