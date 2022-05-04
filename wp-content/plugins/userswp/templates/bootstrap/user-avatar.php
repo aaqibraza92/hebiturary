@@ -11,7 +11,7 @@ $avatar_url   = $args['avatar_url'];
 $user_id      = $args['user_id'];
 $link         = $args['link'];
 $size         = isset($args['size']) ? $args['size'] : 50;
-
+//print_r($avatar_url);
 if($user_id){
     $user = get_userdata($user_id);
 } else {
@@ -27,6 +27,7 @@ if(!$uwp_in_user_loop){ ?><div class="card shadow-0 border-0 mw-100 bg-transpare
 <div class="card-body  <?php if(!$uwp_in_user_loop){ ?>mt-xl-0 pt-0<?php }else{?>text-center pb-0<?php }?>">
 
 	<div class="row justify-content-center">
+		
 
 		<div class="col <?php if($uwp_in_user_loop){?>col-5<?php }?> text-center tofront ">
 			<?php if ($uwp_in_user_loop || 1==$link) { echo '<a href="'.esc_url(get_author_posts_url($user->ID)).'" title="'.esc_attr( $user->display_name ).'">';} ?>

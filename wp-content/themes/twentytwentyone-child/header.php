@@ -77,6 +77,11 @@
 	<!-- ANIMATE -->
 	<link rel='stylesheet' href="<?php echo get_stylesheet_directory_uri(); ?>/framework/css/animate.min.css">
 
+	<link rel='stylesheet' type='text/css' href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<link rel='stylesheet' type='text/css' href="https://fonts.googleapis.com/css?family=Questrial">
+	<script src="https://vjs.zencdn.net/5.4.6/video.js"></script>
+	
+
 </head>
 
 <body <?php body_class(); ?>>
@@ -108,6 +113,16 @@
 						</div>
 
 						<div class="col-md-9 col-xs-3">
+
+							<?php
+							$id = get_current_user_id();
+							$link = get_user_meta($id, 'avatar_thumb', true);
+							print_r($link);
+							global $wpdb;
+							$results = $wpdb->get_results("SELECT avatar_thumb FROM `wp_uwp_usermeta` WHERE user_id=$id");
+							$avtarUrl = $results[0]->avatar_thumb;
+							$uploadAvt = esc_url(home_url('/wp-content/uploads')) . $avtarUrl;
+							?>
 							<div class="d-flex justify-content-end">
 								<?php wp_nav_menu(array('theme_location' => 'primary', 'menu_class' => 'nav-menu',));
 								$username = get_the_author_meta('display_name', get_current_user_id());
@@ -115,11 +130,23 @@
 								<?php
 								if (is_user_logged_in()) {
 								?>
+
 									<div class="dropdown">
 										<span class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 											<div class="d-flex align-items-center">
 												<div class="w40 mr8">
-													<img class="radius100 w-100" src="<?php echo get_stylesheet_directory_uri(); ?>/framework/images/users.jpg" class="logo-img" alt="Logo">
+													<?php
+													if ($avtarUrl===null) {
+													?>
+														<img class="radius100 w-100" src="<?php echo get_stylesheet_directory_uri(); ?>/framework/images/users.jpg" class="logo-img" alt="Logo">
+													<?php
+													} else {
+													?>
+														<img class="radius100 w-100" src="<?php echo $uploadAvt ?>" class="logo-img" alt="Logo">
+													<?php
+													}
+													?>
+
 												</div>
 												<div class="colorWhite text-capitalize">
 													<?php echo $username ?>
@@ -128,17 +155,17 @@
 
 										</span>
 										<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-											<a class="dropdown-item" href="<?php echo esc_url( home_url( '/account' ) ); ?>">My Profile</a>
-											<a class="dropdown-item" href="<?php echo esc_url( home_url( '/account' ) ); ?>">My Report</a>
-											<a class="dropdown-item" href="<?php echo wp_logout_url($redirect = esc_url( home_url( '/login' ) ) ) ?>">Logout</a>
+											<a class="dropdown-item" href="<?php echo esc_url(home_url('/account')); ?>">My Profile</a>
+											<a class="dropdown-item" href="<?php echo esc_url(home_url('/account')); ?>">My Report</a>
+											<a class="dropdown-item" href="<?php echo wp_logout_url($redirect = esc_url(home_url('/login'))) ?>">Logout</a>
 										</div>
 									</div>
 								<?php
 								} else {
 								?>
-								<div class="ml10">
-									<a class="menuItems fw700" href="<?php echo esc_url( home_url( '/login' ) ); ?>">Login/Signup</a>
-								</div>
+									<div class="ml10">
+										<a class="menuItems fw700" href="<?php echo esc_url(home_url('/login')); ?>">Login/Signup</a>
+									</div>
 								<?php
 								}
 								?>
@@ -171,6 +198,8 @@
 	<!-- END header-wrapper -->
 
 	</header>
+
+
 
 	<div id="content" class="site-content">
 		<div id="primary" class="content-area">

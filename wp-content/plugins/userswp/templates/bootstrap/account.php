@@ -49,8 +49,11 @@ do_action('uwp_template_before', 'account'); ?>
 					$currentUser=get_current_user_id();
 					$user_info = get_userdata($currentUser);
 					$server_url = get_field( 'report', 'user_' . get_current_user_id() );
-					print_r($server_url);
 					?>
+					<div class="fs17 mb0">
+						
+						<a style="color: #fff;" href="<?php echo $server_url; ?>" target="_blank"><?php echo $server_url; ?></a>
+					</div>
 				</div>
 
 				<?php
