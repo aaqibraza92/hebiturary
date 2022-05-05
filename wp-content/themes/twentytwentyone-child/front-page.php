@@ -366,7 +366,7 @@ if (get_option('show_on_front') == 'posts') {
 			</div>
 		</div>
 	</div>
-	<div class="page-section">
+	<div class="page-section" id="program">
 		<div class="container-fluid">
 			<div class="row row-sm-fix">
 
@@ -378,7 +378,7 @@ if (get_option('show_on_front') == 'posts') {
 						<div class="fes2-text-cont mb-20">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur cumque, suscipit ipsum vero animi autem eius nulla illum sequi temporibus provident labore. Recusandae molestias deserunt blanditiis aliquam odit temporibus quo?
 						</div>
 
-						<a class="button thin medium full-rounded hover-dark tp-button1 btnRed" href="https://api.whatsapp.com/send?phone=+919711571907&amp;text=Hello Jyoti">Go to PAP</a>
+						<a class="button thin medium full-rounded hover-dark tp-button1 btnRed" href="https://api.whatsapp.com/send?phone=+919711571907&amp;text=Hi, I would like to know more about the PAP. Can you please help me ?">Go to PAP</a>
 						<div class="textLink mt18">
 							<a href="#">Watch the video</a>
 						</div>
@@ -394,7 +394,7 @@ if (get_option('show_on_front') == 'posts') {
 							<div class="fes2-text-cont mb-20">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur cumque, suscipit ipsum vero animi autem eius nulla illum sequi temporibus provident labore. Recusandae molestias deserunt blanditiis aliquam odit temporibus quo?
 							</div>
 
-							<a class="button thin medium full-rounded hover-dark tp-button1 btnYellow" href="https://api.whatsapp.com/send?phone=+919711571907&amp;text=Hello Jyoti">Go to HEP</a>
+							<a class="button thin medium full-rounded hover-dark tp-button1 btnYellow" href="https://api.whatsapp.com/send?phone=+919711571907&amp;text=Hi, I would like to know more about the HEP. Can you please help me ?">Go to HEP</a>
 						</div>
 					</div>
 				</div>
@@ -437,6 +437,45 @@ if (get_option('show_on_front') == 'posts') {
 			</div>
 		</div>
 	</div>
+
+	<div class="page-section" id="team">
+		<div class="container-fluid">
+			<div class="row row-sm-fix">
+
+
+			<div class="col-md-6">
+					<div class="row h-100">
+						<video id="my-video" class="video-js cover" controls preload="auto" poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg" data-setup='' loop>
+							<source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4" type='video/mp4'>
+						</video>
+						<video class="h-100 cover" controls class="w-100">
+							<source src=http://techslides.com/demos/sample-videos/small.webm type=video/webm>
+							<source src=http://techslides.com/demos/sample-videos/small.ogv type=video/ogg>
+							<source src=http://techslides.com/demos/sample-videos/small.mp4 type=video/mp4>
+							<source src=http://techslides.com/demos/sample-videos/small.3gp type=video/3gp>
+						</video>
+					</div>
+
+				</div>
+
+				<div class="col-md-6 wow fadeInLeft equal-height ">
+					<div class="fes2-main-text-cont">
+						<div class="fes2-title-45 font-montserrat">
+							Our<br>
+							<strong>Team</strong>
+						</div>
+						<div class="fes2-text-cont mb-20">Following the assessment of your current food habits and your goals, we make gradual and agreeable changes to what you can eat to maintain a healthy balance of vitamins, minerals, proteins, carbs and good fats in your body. Eventually turning your relationship with food more intimate.
+						</div>
+						<a class="button thin medium full-rounded hover-dark tp-button1 btnYellow" href="https://api.whatsapp.com/send?phone=+919711571907&amp;text=Hi, I would like to know more about you guys. Can you please help me ?">Go to team</a>
+					</div>
+				</div>
+
+			
+
+			</div>
+		</div>
+	</div>
+
 
 
 	<div class="page-section">
